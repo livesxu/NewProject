@@ -1,0 +1,33 @@
+
+//pch
+
+#ifndef MainPCH_pch
+#define MainPCH_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//分类
+#import "Categorys.h"
+//常量
+#import "Const.h"
+//和app有关的宏定义
+#import "APPMacros.h"
+#import "NotificationMacros.h"
+#import "UtilsMacros.h"
+#import "VendorMacros.h"
+
+//base文件
+#import "BaseViewController.h"
+#import "MainNaviController.h"
+#import "MainTabBarViewController.h"
+
+//工具类
+#import "Tools.h"
+
+//cocoapods导入的第三方
+#import "Vender.h"
+
+//单例
+
+#endif /* MainPCH_pch */
