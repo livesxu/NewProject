@@ -16,5 +16,7 @@ pod 'YYWebImage', '~> 1.0.5’
 pod 'IQKeyboardManager', '~> 4.0.7’
 pod 'AFNetworking', '~> 3.1.0’
 pod 'ReactiveCocoa', '~> 4.2.2'
+pod 'Aspects', '~> 1.4.1’
+pod 'SWTableViewCell', '~> 0.3.7'
 
 end

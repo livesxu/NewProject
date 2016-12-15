@@ -7,7 +7,6 @@
 //
 
 #import "TestViewController.h"
-#import "SkipRollLoadingAnimation.h"
 
 @interface TestViewController ()
 
@@ -19,6 +18,11 @@
 
 @implementation TestViewController
 
+-(void)dealloc{
+    
+    NSLog(@"test销毁");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,19 +31,73 @@
     back.frame=CGRectMake(100, 100, 50, 44);
     back.titleLabel.text=@"Go";
     
+    back.timeInterval = 3;
+    
     [back addTarget:self action:@selector(goAction) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:back];
+    id xx = [NSArray array][1];
     
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(500, 1000, 100, 111)];
+    
+    [self.view addSubview:view];
+    
+    [self.view layoutSubviews];
+    
+    UIImage *xxImg = [UIImage imageNamed:@"111"];
     self.statusTopDistance = 300;
     
     self.isInteractivePopEnable=NO;
     
+    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@"我",@"是",@"人"]];
+    [array addObject:@"吗"];
+    
+//    NSLog(@"%@",array);
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObject:@[@"我",@"是",@"人"] forKey:@"我测试"];
+    
+    [array addObject:dic];
+    
+    [array addObject:dic];
+    
+//    NSLog(@"%@",array);
+    
+    NSLog(@"%@",dic);
+    
+//    NSLog(@"%@",[NSArray array]);
+    
+    NSLog(@"%@",[NSDictionary dictionary]);
+    
+    [self run];
+    
+    [TestViewController aspect_hookSelector:@selector(run) withOptions:AspectPositionInstead usingBlock:^(){
+    
+        NSLog(@"ASP run");
+    } error:nil];
+    
+    [self run];
+    
+}
+
+-(void)run{
+    
+    NSLog(@"run");
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSLog(@"11");
 }
 -(void)goAction{
     
     [self.viewTest removeFromSuperview];
     self.status=BaseShowStatusDefault;
+    
+    [self photoAlertShowAction:^(UIImage *image) {
+        
+        NSLog(@"%@",image);
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

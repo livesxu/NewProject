@@ -4,9 +4,12 @@
 #ifndef Tools_h
 #define Tools_h
 
+
 #import "AlertBlockCustom.h"
 #import "KeyBoardCustom.h"
 #import "UIView+Extension.h"
-#import "SkipRollLoadingAnimation.h"
+#import "UIViewController+PhotoExtension.h"
+#import "UIView+Picker.h"
+
 
 #endif /* Tools_h */

@@ -34,6 +34,8 @@
     TestViewController *test=[[TestViewController alloc]init];
     
     [self.navigationController pushViewController:test animated:YES];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

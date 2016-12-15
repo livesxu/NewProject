@@ -2,6 +2,7 @@
 //
 
 #import "BaseViewController.h"
+#import "LoginViewController.h"
 
 @interface BaseViewController ()
 
@@ -331,6 +332,13 @@
     
 }
 
+#pragma mark - Login --- 登录统一此处
+
+-(void)loginAction:(NSDictionary *)followDic{
+    
+    LoginViewController *login = [[LoginViewController alloc]init];
+ 
+}
 
 
 @end

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Aspects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FDFullscreenPopGesture.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,7 +64,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -69,20 +84,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YYWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04DCA651E15D17612E676F8E8697DECC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0F71FC248875B67F53494C44B17B40EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2AECEEF458A86C6839327D8A38473654</key>
+		<key>1CA61AC316BF32AF33A53B8B8E4150B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>249AF0456C940D94A1D4B40A12C1DEAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3CD4F1B3A0875BC6E4E6102132DF409E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4684880AE79FDCC591553F032952D48B</key>
+		<key>49F9C2EF2291CF407D554657B693D323</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E231E4067DD49BCF2738835E83BC749</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +132,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E7D10C9E86657454C3E683A0ADDA7D7</key>
+		<key>8296AF118EB9BC398676D0F5ED5C63BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B03A91549CD11DEFC11673B49612024C</key>
+		<key>8FE394C39AC89A793C75CF8D2E6C8643</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7CF38374B7C28E9EB93538C34A69E2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,6 +157,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D0BC5EC937138F5DD6A83C3E35FAE730</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
@@ -132,7 +172,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1B8471303D663038FCCD2E1D022D6A7</key>
+		<key>E5E9E0A1BFE72A61BEEB3DF0811C5255</key>
 		<dict>
 			<key>primary</key>
 			<true/>

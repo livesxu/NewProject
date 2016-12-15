@@ -4,17 +4,19 @@
 #ifndef Categorys_h
 #define Categorys_h
 
-#import "UIControl+SYYCategory.h"
 #import "UIImage+Deal.h"
 #import "NSString+Deal.h"
 #import "UIColor+Turn.h"
 #import "UILabel+Custom.h"
 #import "UIButton+Custom.h"
-#import "NSMutableArray+SYUtil.h"
 #import "UITextView+Placeholder.h"
 #import "UITextField+InputNumberControl.h"
 #import "NSString+PreciseDecimalCalculate.h"
 #import "UIView+LayerAction.h"
 #import "UIView+Framer.h"
+//#import "NSArray+Safety.h"//无需导入，有即运行
+//#import "UIImage+MissPrompt.h"
+//#import "UIView+Overstep.h"
+#import "UIControl+TouchControl.h"
 
 #endif /* Categorys_h */
