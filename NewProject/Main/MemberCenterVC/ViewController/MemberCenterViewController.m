@@ -28,6 +28,16 @@
     [back addTarget:self action:@selector(goAction) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:back];
+    
+    
+    UIButton *back2=[UIButton buttonWithType:UIButtonTypeCustom];
+    back2.backgroundColor=[UIColor yellowColor];
+    back2.frame=CGRectMake(200, 200, 50, 44);
+    back2.titleLabel.text=@"Go";
+    
+    [back2 addTarget:self action:@selector(goAction2) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:back2];
 }
 -(void)goAction{
     
@@ -35,6 +45,17 @@
     
     [self.navigationController pushViewController:test animated:YES];
     
+    
+}
+-(void)goAction2{
+    
+    __weak typeof(self) weakSelf = self;
+    [self photoAlertShowAction:^(UIImage *image) {
+        
+        [weakSelf showHint:@"_______________________________________________-------------------成功"];
+        NSLog(@"_______________________________________________-------------------成功");
+        
+    } IsClip:NO];
     
 }
 

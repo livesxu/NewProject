@@ -39,4 +39,9 @@
 + (UIImage *)imageWithColor:(UIColor *)color;
 /*根据字符串生成二维码图片*/
 + (UIImage *)QRCodeWithString:(NSString *)string size:(CGSize)size;
+/*生成图片*/
++ (UIImage*)getImageWithColor:(UIColor*)color andHeight:(CGFloat)height;
+/*获取网络图片尺寸*/
++ (CGSize)downloadImageSizeWithURL:(id)imageURL;
+
 @end

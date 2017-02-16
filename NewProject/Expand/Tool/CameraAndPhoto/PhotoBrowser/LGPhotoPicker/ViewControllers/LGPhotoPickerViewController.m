@@ -18,11 +18,13 @@
 
 @implementation LGPhotoPickerViewController
 
-- (instancetype)initWithShowType:(LGShowImageType)showType{
+- (instancetype)initWithShowType:(LGShowImageType)showType isClip:(BOOL)isClip{
     self = [super init];
     if (self) {
+        self.isClip = isClip;
         self.showType = showType;
         self.groupVc.showType = showType;
+        [self createNavigationController];
     }
     return self;
 }
@@ -43,6 +45,7 @@
 #pragma mark - init Action
 - (void) createNavigationController{
     _groupVc = [[LGPhotoPickerGroupViewController alloc] init];
+    _groupVc.isClip = _isClip;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:_groupVc];
     //navi,livesxu
 #pragma mark - navi自定义--->
@@ -55,7 +58,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self createNavigationController];
+//        [self createNavigationController];
     }
     return self;
 }

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLEX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -97,17 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CA61AC316BF32AF33A53B8B8E4150B9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>249AF0456C940D94A1D4B40A12C1DEAB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3CD4F1B3A0875BC6E4E6102132DF409E</key>
+		<key>2C78059D9155828F0715F7AF3C3EA6D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>49F9C2EF2291CF407D554657B693D323</key>
+		<key>48688B5FD22564817C67AD914B9C6FD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E231E4067DD49BCF2738835E83BC749</key>
+		<key>4E2190497FF43E6ACC65E05445FF33F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +127,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8296AF118EB9BC398676D0F5ED5C63BC</key>
+		<key>60649A4B9DFAEE822E4D5AA8731D2FC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67E944C458CC9561EC0240A193908151</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68A07EF405FD9BCB32A62DB85FB63511</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7BC503BF159389723C876190C5352BDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C005DBB786D3D23D697DCA9E77CC196</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,22 +157,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7CF38374B7C28E9EB93538C34A69E2E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C36CB2CB977A4E7D954935096D00A1ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<key>C51B1C4F5855B3962A50ED1352E74615</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0BC5EC937138F5DD6A83C3E35FAE730</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,7 +182,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5E9E0A1BFE72A61BEEB3DF0811C5255</key>
+		<key>FFCBE72E05D53B4A87AD02BAE4CF757C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

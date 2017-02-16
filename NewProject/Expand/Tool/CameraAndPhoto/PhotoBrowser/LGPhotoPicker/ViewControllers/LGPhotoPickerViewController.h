@@ -45,8 +45,11 @@ typedef NS_ENUM(NSInteger , PickerViewShowStatus) {
 @property (assign,nonatomic) BOOL topShowPhotoPicker;
 
 // @function
-- (instancetype)initWithShowType:(LGShowImageType)showType;
+- (instancetype)initWithShowType:(LGShowImageType)showType isClip:(BOOL)isClip;
 // 展示控制器
 - (void)showPickerVc:(UIViewController *)vc;
+
+//添加裁剪
+@property (nonatomic ,assign) BOOL isClip;//默认不裁剪,不设置
 
 @end

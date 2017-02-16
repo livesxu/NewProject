@@ -14,6 +14,6 @@ typedef void(^CameraPass)(UIImage *image, NSDictionary *data);
 
 @property (nonatomic ,copy) CameraPass cameraPass;
 
--(instancetype)initCameraData:(CameraPass)cameraPass;
+-(instancetype)initCameraData:(CameraPass)cameraPass isClip:(BOOL)isClip;
 
 @end

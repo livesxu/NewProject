@@ -13,10 +13,11 @@
 #import "UITextField+InputNumberControl.h"
 #import "NSString+PreciseDecimalCalculate.h"
 #import "UIView+LayerAction.h"
-#import "UIView+Framer.h"
 //#import "NSArray+Safety.h"//无需导入，有即运行
 //#import "UIImage+MissPrompt.h"
 //#import "UIView+Overstep.h"
 #import "UIControl+TouchControl.h"
+#import "UIDevice+CurrentDevice.h"
+#import "UIView+HitTest.h"
 
 #endif /* Categorys_h */

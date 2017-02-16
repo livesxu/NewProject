@@ -141,6 +141,7 @@
     assetsVc.assetsGroup = group;
     assetsVc.topShowPhotoPicker = self.topShowPhotoPicker;
     assetsVc.maxCount = self.maxCount;
+    assetsVc.isClip = _isClip;
     [self.navigationController pushViewController:assetsVc animated:YES];
 }
 

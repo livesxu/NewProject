@@ -30,4 +30,6 @@
 
 - (instancetype)initWithShowType:(LGShowImageType)showType;
 
+@property (nonatomic , assign) BOOL isClip;
+
 @end

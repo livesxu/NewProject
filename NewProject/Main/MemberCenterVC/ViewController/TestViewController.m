@@ -7,11 +7,17 @@
 //
 
 #import "TestViewController.h"
+#import "SubTestBtn.h"
+#import "NextTestTableViewController.h"
+#import "NetworkCentre.h"
 
-@interface TestViewController ()
+static NSString *const dataUrl = @"http://www.qinto.com/wap/index.php?ctl=article_cate&act=api_app_getarticle_cate&num=1&p=7";
+
+@interface TestViewController ()<SubTestDelegate,LGPhotoPickerBrowserViewControllerDataSource,LGPhotoPickerBrowserViewControllerDelegate>
 
 @property (nonatomic,strong) UIView *viewTest;
 
+@property (nonatomic,strong) NSMutableArray *LGPhotoPickerBrowserPhotoArray;
 
 
 @end
@@ -26,14 +32,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *back=[UIButton buttonWithType:UIButtonTypeCustom];
+    SubTestBtn *back=[SubTestBtn buttonWithType:UIButtonTypeCustom];
+    back.delegate = self;
+    [[back rac_signalForSelector:@selector(touchesBegan:withEvent:)]subscribeNext:^(id x) {
+        
+        NSLog(@"RAC_Sub走了");
+        NSLog(@"%@",x);
+    }];
+    
     back.backgroundColor=[UIColor redColor];
     back.frame=CGRectMake(100, 100, 50, 44);
     back.titleLabel.text=@"Go";
     
     back.timeInterval = 3;
     
-    [back addTarget:self action:@selector(goAction) forControlEvents:UIControlEventTouchUpInside];
+//    [back addTarget:self action:@selector(goAction) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:back];
     id xx = [NSArray array][1];
@@ -41,41 +54,65 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(500, 1000, 100, 111)];
     
     [self.view addSubview:view];
+//
+//    [self.view layoutSubviews];
+//    
+//    UIImage *xxImg = [UIImage imageNamed:@"111"];
+//    self.statusTopDistance = 300;
+//    
+//    
+//    [self prepareForPhotoBroswerWithImage];
+
+    UITextView *testTV = [[UITextView alloc]initWithFrame:CGRectMake(10, 400, kScreenWidth -20, kScreenHeight - 400)];
     
-    [self.view layoutSubviews];
+    testTV.backgroundColor = [UIColor yellowColor];
     
-    UIImage *xxImg = [UIImage imageNamed:@"111"];
-    self.statusTopDistance = 300;
+    [self.view addSubview:testTV];
     
-    self.isInteractivePopEnable=NO;
     
-    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@"我",@"是",@"人"]];
-    [array addObject:@"吗"];
     
-//    NSLog(@"%@",array);
+    UIButton *btnGreen = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithObject:@[@"我",@"是",@"人"] forKey:@"我测试"];
+    btnGreen.backgroundColor = [UIColor greenColor];
+    btnGreen.frame = CGRectMake(200, 100, 50, 50);
     
-    [array addObject:dic];
     
-    [array addObject:dic];
+    __weak UITextView *weakTV = testTV;
+    [[btnGreen rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        
+        NSLog(@"rac_green");
+        
+        [NetworkCentre Request:@"http://www.qinto.com/wap/index.php?ctl=article_cate&act=api_app_getarticle_cate&num=1&p=7" Type:NetworkRequestTypeGetCache parameters:nil success:^(id responseObject) {
+            
+            
+            weakTV.text = [NetworkCentre jsonToString:responseObject];
+            
+        } failure:^(NSError *error) {
+            
+        }];
+//        [self pushPB];
+    }];
     
-//    NSLog(@"%@",array);
     
-    NSLog(@"%@",dic);
+    UIButton *btnOr = [UIButton buttonWithType:UIButtonTypeCustom];
     
-//    NSLog(@"%@",[NSArray array]);
+    btnOr.backgroundColor = [UIColor orangeColor];
+    btnOr.frame = CGRectMake(30, 30, 50, 50);
+    [[btnOr rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        
+        NSLog(@"rac_btnOr");
+//        [self pushPB];
+    }];
     
-    NSLog(@"%@",[NSDictionary dictionary]);
+//    btnGreen.isOverStepTouch = YES;
+
+    [btnGreen addSubview:btnOr];
     
-    [self run];
     
-    [TestViewController aspect_hookSelector:@selector(run) withOptions:AspectPositionInstead usingBlock:^(){
+    btnGreen.hitTestEdgeInsets = UIEdgeInsetsMake(0, 0, 100, 100);
     
-        NSLog(@"ASP run");
-    } error:nil];
-    
-    [self run];
+    [self.view addSubview:btnGreen];
+
     
 }
 
@@ -91,13 +128,15 @@
 }
 -(void)goAction{
     
+//    id xx = [NSArray array][1];
+    
     [self.viewTest removeFromSuperview];
     self.status=BaseShowStatusDefault;
     
     [self photoAlertShowAction:^(UIImage *image) {
         
-        NSLog(@"%@",image);
-    }];
+        NSLog(@"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||NEXT %@",image);
+    } IsClip:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -113,10 +152,20 @@
     return _viewTest;
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    [self.view addSubview:self.viewTest];
-    self.status=BaseShowStatusLoading;
+//    [self.view addSubview:self.viewTest];
+//    self.status=BaseShowStatusLoading;
+//    
+//    
+//    [self showHint:@"HiHi"];
+//    
+    NextTestTableViewController *next = [[NextTestTableViewController alloc]init];
+    
+    [next aspect_hookSelector:@selector(viewDidAppear:) withOptions:0 usingBlock:^(){
+        NSLog(@"ASP ___OK");} error:nil];
+    
+    [self.navigationController pushViewController:next animated:YES];
     
 //    [self.view beginLoading];
 //    [[SkipRollLoadingAnimation alloc]configureAnimationInLayer:self.view.layer withSize:CGSizeMake(50, 50) tintColor:[UIColor yellowColor]];
@@ -131,5 +180,48 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)testPrintfSome;{
+    
+    NSLog(@"Sub代理走了");
+}
+
+-(void)pushPB{
+    LGPhotoPickerBrowserViewController *bVC = [[LGPhotoPickerBrowserViewController alloc]init];
+    bVC.delegate = self;
+    bVC.dataSource = self;
+    bVC.showType = LGShowImageTypeImageBroswer;
+    [self presentViewController:bVC animated:YES completion:nil];
+    
+    
+    
+}
+/**
+ *  给照片浏览器传image的时候先包装成LGPhotoPickerBrowserPhoto对象
+ */
+- (void)prepareForPhotoBroswerWithImage {
+    self.LGPhotoPickerBrowserPhotoArray = [[NSMutableArray alloc] init];
+    for (int i = 1; i < 5; i++) {
+        LGPhotoPickerBrowserPhoto *photo = [[LGPhotoPickerBrowserPhoto alloc] init];
+        photo.photoImage = [UIImage imageNamed:[NSString stringWithFormat:@"guidepage_circle_0%d.jpg",i]];
+        [self.LGPhotoPickerBrowserPhotoArray addObject:photo];
+    }
+}
+
+/**
+ *  每个组多少个图片
+ */
+- (NSInteger) photoBrowser:(LGPhotoPickerBrowserViewController *)photoBrowser numberOfItemsInSection:(NSUInteger)section;{
+    
+    return self.LGPhotoPickerBrowserPhotoArray.count;
+}
+/**
+ *  每个对应的IndexPath展示什么内容
+ */
+- (id<LGPhotoPickerBrowserPhoto>)photoBrowser:(LGPhotoPickerBrowserViewController *)pickerBrowser photoAtIndexPath:(NSIndexPath *)indexPath;{
+    
+    return self.LGPhotoPickerBrowserPhotoArray[indexPath.item];
+    
+}
+
 
 @end

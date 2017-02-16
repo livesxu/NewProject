@@ -121,26 +121,27 @@
     
     LGPhotoAssets *asset = self.dataArray[indexPath.item];
     LGPhotoPickerImageView *pickerImageView = [cell.contentView.subviews objectAtIndex:0];
-    // 如果没有就添加到数组里面，存在就移除
-    if ([pickerImageView isKindOfClass:[LGPhotoPickerImageView class]] && pickerImageView.isMaskViewFlag) {
-        [self.selectAssets removeObject:asset];
-        [self.lastDataArray removeObject:asset];
-    }else{
-        // 1 判断图片数超过最大数或者小于0
-        NSUInteger maxCount = (self.maxCount < 0) ? KPhotoShowMaxCount :  self.maxCount;
-        if (self.selectAssets.count >= maxCount) {
-            NSString *format = [NSString stringWithFormat:@"最多只能选择%zd张图片",maxCount];
-            if (maxCount == 0) {
-                format = [NSString stringWithFormat:@"您最多只能选择9张图片"];
-            }
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提醒" message:format delegate:self cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
-            [alertView show];
-            return;
-        }
-        
-        [self.selectAssets addObject:asset];
-        [self.lastDataArray addObject:asset];
-    }
+//    // 如果没有就添加到数组里面，存在就移除
+//    if ([pickerImageView isKindOfClass:[LGPhotoPickerImageView class]] && pickerImageView.isMaskViewFlag) {
+//        [self.selectAssets removeObject:asset];
+//        [self.lastDataArray removeObject:asset];
+//    }else{
+//        // 1 判断图片数超过最大数或者小于0
+//        NSUInteger maxCount = (self.maxCount < 0) ? KPhotoShowMaxCount :  self.maxCount;
+////        [self.selectAssets removeAllObjects];
+//        if (self.selectAssets.count >= maxCount) {
+//            NSString *format = [NSString stringWithFormat:@"最多只能选择%zd张图片",maxCount];
+//            if (maxCount == 0) {
+//                format = [NSString stringWithFormat:@"您最多只能选择9张图片"];
+//            }
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提醒" message:format delegate:self cancelButtonTitle:nil otherButtonTitles:@"好的", nil];
+//            [alertView show];
+//            return;
+//        }
+//        
+//        [self.selectAssets addObject:asset];
+//        [self.lastDataArray addObject:asset];
+//    }
     // 告诉代理现在被点击了!
     if ([self.collectionViewDelegate respondsToSelector:@selector(pickerCollectionViewDidSelected: deleteAsset: indexPath:)]) {
         if (pickerImageView.isMaskViewFlag) {

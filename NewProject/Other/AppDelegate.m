@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "MainTabBarViewController.h"
-#import "LXGuideAndLaunch.h"
+#import "LXUncaughtExceptionHandler.h"
+#import "PerformanceMonitor.h"
+#import "AppDelegate+Assist.h"
+
 
 @interface AppDelegate ()
 
@@ -19,33 +21,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     
-    [[UIButton appearance] setExclusiveTouch:YES];
-    
+    //加载界面
     [self GuideAndLaunchAction];
+    //崩溃检测,涉及到操作跟踪
+    LXInstallUncaughtExceptionHandler();
+    //卡顿监测
+    [[PerformanceMonitor sharedInstance] start];
+    //不可多重点击
+    [[UIButton appearance] setExclusiveTouch:YES];
+    //运行中检测状态
+    //Test_run
     
     return YES;
-}
-//设置引导页和广告页
-- (void)GuideAndLaunchAction{
-    
-    LXGuideAndLaunch *GL=[[LXGuideAndLaunch alloc]init];
-    __weak LXGuideAndLaunch *weakGL=GL;
-    [GL storeFirstName:@"isFirst" andMainViewController:[[MainTabBarViewController alloc] init] guide:^{
-        
-        [weakGL scrollGuideWithPicturesName:kGuideImages
-                               progressName:kProgressImages];
-        
-    } launch:^{
-        
-        [weakGL viewLaunchAdvertisePatternWithImage:@"ad_page" time:5];
-        
-    }];
-    self.window.rootViewController=GL;//root转变为LXGuideAndLaunch
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

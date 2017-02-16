@@ -12,6 +12,7 @@
 #import "LGPhotoPickerGroup.h"
 #import "LGPhotoPickerCollectionViewCell.h"
 #import "LGPhotoPickerFooterCollectionReusableView.h"
+#import "YSHYClipViewController.h"
 
 static CGFloat CELL_ROW = 4;
 static CGFloat CELL_MARGIN = 2;
@@ -130,24 +131,50 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
 - (void) setupPhotoBrowserInCasePreview:(BOOL)preview
                        CurrentIndexPath:(NSIndexPath *)indexPath{
     
-    self.isPreview = preview;
-    // 图片游览器
-    LGPhotoPickerBrowserViewController *pickerBrowser = [[LGPhotoPickerBrowserViewController alloc] init];
-    pickerBrowser.showType = self.showType;
-    // 数据源/delegate
-    pickerBrowser.delegate = self;
-    pickerBrowser.dataSource = self;
-    pickerBrowser.maxCount = self.maxCount;
-    pickerBrowser.isOriginal = self.isOriginal;
-    pickerBrowser.selectedAssets = [self.selectAssets mutableCopy];
-    // 数据源可以不传，传photos数组 photos<里面是ZLPhotoPickerBrowserPhoto>
-//    pickerBrowser.photos = self.selectAssets;
-    // 是否可以删除照片
-    pickerBrowser.editing = NO;
-    // 当前选中的值
-    pickerBrowser.currentIndexPath = indexPath;    // 展示控制器
-//    [pickerBrowser showPickerVc:self];
-    [self.navigationController presentViewController:pickerBrowser animated:YES completion:nil];
+    if (_isClip) {
+        
+        LGPhotoAssets *photo=self.assets[indexPath.row];
+        
+        if (!self.selectAssets) {
+            self.selectAssets=[NSMutableArray array];
+        } else {
+            [self.selectAssets removeAllObjects];
+        }
+        [self.selectAssets addObject:photo];
+        
+        __weak typeof(self) weakSelf = self;
+        YSHYClipViewController *clipVC = [[YSHYClipViewController alloc]initWithImage:photo.originImage ClipInfo:^(UIImage *imageGet) {
+            
+            [weakSelf.selectAssets removeAllObjects];
+            [weakSelf.selectAssets addObject:imageGet];
+            
+            [weakSelf sendBtnTouched];
+        }];
+        
+        [self.navigationController presentViewController:clipVC animated:YES completion:nil];
+        
+    } else {
+        
+        self.isPreview = preview;
+        // 图片游览器
+        LGPhotoPickerBrowserViewController *pickerBrowser = [[LGPhotoPickerBrowserViewController alloc] init];
+        pickerBrowser.showType = self.showType;
+        // 数据源/delegate
+        pickerBrowser.delegate = self;
+        pickerBrowser.dataSource = self;
+        pickerBrowser.maxCount = self.maxCount;
+        pickerBrowser.isOriginal = self.isOriginal;
+        pickerBrowser.selectedAssets = [self.selectAssets mutableCopy];
+        // 数据源可以不传，传photos数组 photos<里面是ZLPhotoPickerBrowserPhoto>
+        //    pickerBrowser.photos = self.selectAssets;
+        // 是否可以删除照片
+        pickerBrowser.editing = NO;
+        // 当前选中的值
+        pickerBrowser.currentIndexPath = indexPath;    // 展示控制器
+        //    [pickerBrowser showPickerVc:self];
+        [self.navigationController presentViewController:pickerBrowser animated:YES completion:nil];
+        
+    }
     
 }
 
@@ -402,7 +429,24 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
     }
     [self.selectAssets addObject:photo];
     
-    [self sendBtnTouched];
+    if (_isClip) {
+        
+        __weak typeof(self) weakSelf = self;
+        YSHYClipViewController *clipVC = [[YSHYClipViewController alloc]initWithImage:photo.originImage ClipInfo:^(UIImage *imageGet) {
+            
+            [weakSelf.selectAssets removeAllObjects];
+            [weakSelf.selectAssets addObject:imageGet];
+            
+            [weakSelf sendBtnTouched];
+        }];
+        
+        [self.navigationController presentViewController:clipVC animated:YES completion:nil];
+        
+    } else {
+        
+        [self sendBtnTouched];
+        
+    } 
 }
 
 //cell的右上角选择框被点击会调用

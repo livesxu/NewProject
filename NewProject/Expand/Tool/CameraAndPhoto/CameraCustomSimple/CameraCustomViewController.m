@@ -9,6 +9,7 @@
 #import "CameraCustomViewController.h"
 #import "LLSimpleCamera.h"
 #import "FingerWaveView.h"
+#import "YSHYClipViewController.h"
 
 @interface CameraCustomViewController ()
 @property (strong, nonatomic) LLSimpleCamera *camera;
@@ -25,14 +26,17 @@
 @property (strong, nonatomic) UIImage *imageSto;
 @property (strong, nonatomic) NSDictionary *dataSto;
 
+@property (assign, nonatomic) BOOL isClip;
+
 @end
 
 @implementation CameraCustomViewController
 
--(instancetype)initCameraData:(CameraPass)cameraPass;{
+-(instancetype)initCameraData:(CameraPass)cameraPass isClip:(BOOL)isClip;{
     if ([super init]) {
         
         _cameraPass=cameraPass;
+        _isClip = isClip;
     }
     return self;
 }
@@ -169,9 +173,25 @@
                 weakSelf.imageSto=image;
                 weakSelf.dataSto=metadata;
                 
-                weakSelf.cameraImageView.image=image;
-                [weakSelf.view addSubview:weakSelf.cameraImageView];
-                
+                if (weakSelf.isClip) {
+                    
+                    YSHYClipViewController *clipVC = [[YSHYClipViewController alloc]initWithImage:image ClipInfo:^(UIImage *imageGet) {
+                        
+                        if (weakSelf.cameraPass) {
+                            weakSelf.cameraPass(imageGet,[NSDictionary dictionary]);
+                        }
+                        
+                        [weakSelf dismissButtonPressed];
+                    }];
+                    
+                    [weakSelf presentViewController:clipVC animated:YES completion:nil];
+                    
+                } else {
+                    
+                    weakSelf.cameraImageView.image=image;
+                    [weakSelf.view addSubview:weakSelf.cameraImageView];
+                    
+                }
             }
             else {
                 NSLog(@"An error has occured: %@", error);

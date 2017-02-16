@@ -52,7 +52,7 @@
     
     if ((rectSub.origin.x) > rectSuper.size.width || (rectSub.origin.y) > rectSuper.size.height || (rectSub.origin.x + rectSub.size.width) < 0 || (rectSub.origin.y + rectSub.size.height) < 0) {
         
-        NSLog(@"%@\n未显示在父视图上,超出",view);
+//        NSLog(@"%@\n未显示在父视图上,超出",view);
     }
     
     [self addSubviewPrompt:view];

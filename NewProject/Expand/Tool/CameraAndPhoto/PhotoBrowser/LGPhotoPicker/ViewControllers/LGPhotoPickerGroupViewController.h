@@ -23,4 +23,6 @@
 
 - (instancetype)initWithShowType:(LGShowImageType)showType;
 
+@property (nonatomic , assign) BOOL isClip;//是否裁剪
+
 @end

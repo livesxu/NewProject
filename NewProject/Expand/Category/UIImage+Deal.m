@@ -230,9 +230,79 @@
     qrImage = [qrImage imageByApplyingTransform:CGAffineTransformMakeScale(size.width, size.height)];
     
     //转成 UI的 类型
-    UIImage *qrUIImage = [UIImage imageWithCIImage:qrImage];
+    UIImage *qrUIImage = [UIImage imageWithCIImage:qrImage scale:1.0f orientation:UIImageOrientationUp];
     
     return qrUIImage;
+}
+
+/**
+ *  生成图片
+ *
+ *  @param color  图片颜色
+ *  @param height 图片高度
+ *
+ *  @return 生成的图片
+ */
++ (UIImage*)getImageWithColor:(UIColor*)color andHeight:(CGFloat)height
+{
+    CGRect r= CGRectMake(0.0f, 0.0f, 1.0f, height);
+    UIGraphicsBeginImageContext(r.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, r);
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
+//获取网络图片大小
++ (CGSize)downloadImageSizeWithURL:(id)imageURL {
+    NSURL* URL = nil;
+    if([imageURL isKindOfClass:[NSURL class]]){
+        URL = imageURL;
+    }
+    if([imageURL isKindOfClass:[NSString class]]){
+        URL = [NSURL URLWithString:imageURL];
+    }
+    if(URL == nil) {
+        return CGSizeZero;    // url为空则返回CGSizeZero
+    }
+    
+    
+    NSString* absoluteString = URL.absoluteString;
+    
+    //如果未使用SDWebImage，则忽略；检查是否缓存过该图片
+#ifdef dispatch_main_sync_safe
+    if([[SDImageCache sharedImageCache] diskImageExistsWithKey:absoluteString]) {
+        UIImage* image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:absoluteString];
+        if(!image) {
+            NSData* data = [[SDImageCache sharedImageCache] performSelector:@selector(diskImageDataBySearchingAllPathsForKey:) withObject:URL.absoluteString];
+            image = [UIImage imageWithData:data];
+        }
+        if(image) {
+            return image.size;
+        }
+    }
+#endif
+    
+    CGSize size = CGSizeZero;
+
+    if(CGSizeEqualToSize(CGSizeZero, size)) {
+        // 如果获取文件头信息失败,发送同步请求请求原图
+        NSData* data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:URL] returningResponse:nil error:nil];
+        UIImage* image = [UIImage imageWithData:data];
+        if(image) {
+            //如果未使用SDWebImage，则忽略；缓存该图片
+#ifdef dispatch_main_sync_safe
+            [[SDImageCache sharedImageCache] storeImage:image recalculateFromImage:YES imageData:data forKey:URL.absoluteString toDisk:YES];
+#endif
+            size = image.size;
+        }
+    }
+    return size;
 }
 
 @end
