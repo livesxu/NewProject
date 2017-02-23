@@ -22,7 +22,7 @@
    
     [self.view addSubview:_tableView];
     
-    
+    //table添加组
     [_tableView addSection:^(TableSimpleSection *section, NSUInteger sectionIndex) {
         
         section.headerHeight = 10;
@@ -38,7 +38,7 @@
         section.footerHeight = 20;
         
         section.footerView = footer;
-        
+        //section添加单元
         [section addCell:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
             
             UITableViewCell *cell = [[UITableViewCell alloc]init];

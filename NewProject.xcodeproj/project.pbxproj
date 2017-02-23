@@ -14,6 +14,11 @@
 		5701AB881E09115D00F0F8A3 /* AppActionMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701AB851E09115D00F0F8A3 /* AppActionMonitor.m */; };
 		5701AB891E09115D00F0F8A3 /* UIApplication+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701AB871E09115D00F0F8A3 /* UIApplication+Monitor.m */; };
 		5701AB8C1E0A671700F0F8A3 /* AppDelegate+Assist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701AB8B1E0A671700F0F8A3 /* AppDelegate+Assist.m */; };
+		5701DD261E55954300A53D99 /* WXCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701DD1D1E55954300A53D99 /* WXCircleProgressView.m */; };
+		5701DD271E55954300A53D99 /* WXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701DD1F1E55954300A53D99 /* WXPhoto.m */; };
+		5701DD281E55954300A53D99 /* WXPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701DD211E55954300A53D99 /* WXPhotoBrowser.m */; };
+		5701DD291E55954300A53D99 /* WXPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701DD231E55954300A53D99 /* WXPhotoCell.m */; };
+		5701DD2A1E55954300A53D99 /* WXPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5701DD251E55954300A53D99 /* WXPhotoScrollView.m */; };
 		570655F71E013ECE00D531D6 /* NSArray+Safety.m in Sources */ = {isa = PBXBuildFile; fileRef = 570655EA1E013ECE00D531D6 /* NSArray+Safety.m */; };
 		570655F81E013ECE00D531D6 /* NSObject+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 570655EC1E013ECE00D531D6 /* NSObject+Description.m */; };
 		570655FA1E013ECE00D531D6 /* UIImage+MissPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 570655F01E013ECE00D531D6 /* UIImage+MissPrompt.m */; };
@@ -134,7 +139,9 @@
 		57F8A2C51DF159E3000DC898 /* ad_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F8A2C01DF159E3000DC898 /* ad_page.png */; };
 		57F8A2C71DF159E3000DC898 /* LXGuideAndLaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F8A2C41DF159E3000DC898 /* LXGuideAndLaunch.m */; };
 		57F8A2CA1DF16D0F000DC898 /* UIView+LayerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F8A2C91DF16D0F000DC898 /* UIView+LayerAction.m */; };
+		57FB02701E5D57E600762127 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB026F1E5D57E600762127 /* UIImageView+CornerRadius.m */; };
 		57FC2E691E03822A008D4E68 /* YSHYClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FC2E681E03822A008D4E68 /* YSHYClipViewController.m */; };
+		57FEFE0E1E5EE39900F53787 /* LXScrollLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FEFE0D1E5EE39900F53787 /* LXScrollLoopViewController.m */; };
 		8D7C072550E29A3ECAF6AA59 /* Pods_NewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817BABB93A9B69D96722B176 /* Pods_NewProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +177,16 @@
 		5701AB871E09115D00F0F8A3 /* UIApplication+Monitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Monitor.m"; sourceTree = "<group>"; };
 		5701AB8A1E0A671700F0F8A3 /* AppDelegate+Assist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Assist.h"; sourceTree = "<group>"; };
 		5701AB8B1E0A671700F0F8A3 /* AppDelegate+Assist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Assist.m"; sourceTree = "<group>"; };
+		5701DD1C1E55954300A53D99 /* WXCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCircleProgressView.h; sourceTree = "<group>"; };
+		5701DD1D1E55954300A53D99 /* WXCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCircleProgressView.m; sourceTree = "<group>"; };
+		5701DD1E1E55954300A53D99 /* WXPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPhoto.h; sourceTree = "<group>"; };
+		5701DD1F1E55954300A53D99 /* WXPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPhoto.m; sourceTree = "<group>"; };
+		5701DD201E55954300A53D99 /* WXPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPhotoBrowser.h; sourceTree = "<group>"; };
+		5701DD211E55954300A53D99 /* WXPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPhotoBrowser.m; sourceTree = "<group>"; };
+		5701DD221E55954300A53D99 /* WXPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPhotoCell.h; sourceTree = "<group>"; };
+		5701DD231E55954300A53D99 /* WXPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPhotoCell.m; sourceTree = "<group>"; };
+		5701DD241E55954300A53D99 /* WXPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPhotoScrollView.h; sourceTree = "<group>"; };
+		5701DD251E55954300A53D99 /* WXPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPhotoScrollView.m; sourceTree = "<group>"; };
 		570655E91E013ECE00D531D6 /* NSArray+Safety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safety.h"; sourceTree = "<group>"; };
 		570655EA1E013ECE00D531D6 /* NSArray+Safety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safety.m"; sourceTree = "<group>"; };
 		570655EB1E013ECE00D531D6 /* NSObject+Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Description.h"; sourceTree = "<group>"; };
@@ -389,8 +406,12 @@
 		57F8A2C41DF159E3000DC898 /* LXGuideAndLaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXGuideAndLaunch.m; sourceTree = "<group>"; };
 		57F8A2C81DF16D0F000DC898 /* UIView+LayerAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerAction.h"; sourceTree = "<group>"; };
 		57F8A2C91DF16D0F000DC898 /* UIView+LayerAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerAction.m"; sourceTree = "<group>"; };
+		57FB026E1E5D57E600762127 /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
+		57FB026F1E5D57E600762127 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
 		57FC2E671E03822A008D4E68 /* YSHYClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHYClipViewController.h; sourceTree = "<group>"; };
 		57FC2E681E03822A008D4E68 /* YSHYClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHYClipViewController.m; sourceTree = "<group>"; };
+		57FEFE0C1E5EE39900F53787 /* LXScrollLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXScrollLoopViewController.h; sourceTree = "<group>"; };
+		57FEFE0D1E5EE39900F53787 /* LXScrollLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXScrollLoopViewController.m; sourceTree = "<group>"; };
 		817BABB93A9B69D96722B176 /* Pods_NewProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		889952517B451E6F3A6E8337 /* Pods-NewProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewProject/Pods-NewProject.release.xcconfig"; sourceTree = "<group>"; };
 		E289A21C76EADE66F1E868D3 /* Pods-NewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewProject/Pods-NewProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -441,9 +462,28 @@
 			path = Monitor;
 			sourceTree = "<group>";
 		};
+		5701DD1B1E55954300A53D99 /* 图片浏览 */ = {
+			isa = PBXGroup;
+			children = (
+				5701DD1C1E55954300A53D99 /* WXCircleProgressView.h */,
+				5701DD1D1E55954300A53D99 /* WXCircleProgressView.m */,
+				5701DD1E1E55954300A53D99 /* WXPhoto.h */,
+				5701DD1F1E55954300A53D99 /* WXPhoto.m */,
+				5701DD201E55954300A53D99 /* WXPhotoBrowser.h */,
+				5701DD211E55954300A53D99 /* WXPhotoBrowser.m */,
+				5701DD221E55954300A53D99 /* WXPhotoCell.h */,
+				5701DD231E55954300A53D99 /* WXPhotoCell.m */,
+				5701DD241E55954300A53D99 /* WXPhotoScrollView.h */,
+				5701DD251E55954300A53D99 /* WXPhotoScrollView.m */,
+			);
+			path = "图片浏览";
+			sourceTree = "<group>";
+		};
 		570655E81E013ECE00D531D6 /* RuntimeSets */ = {
 			isa = PBXGroup;
 			children = (
+				57FB026E1E5D57E600762127 /* UIImageView+CornerRadius.h */,
+				57FB026F1E5D57E600762127 /* UIImageView+CornerRadius.m */,
 				1B92ADB01E4961240088F061 /* UIScrollView+EmptyDataSet.h */,
 				1B92ADB11E4961240088F061 /* UIScrollView+EmptyDataSet.m */,
 				570655E91E013ECE00D531D6 /* NSArray+Safety.h */,
@@ -653,6 +693,8 @@
 		571180041DE9676F003F09E6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				57FEFE0B1E5EE39900F53787 /* 轮播图 */,
+				5701DD1B1E55954300A53D99 /* 图片浏览 */,
 				5797EB3D1E54448C00EDBDBE /* TableSimple */,
 				577750DB1E1107E900EAEB2E /* Test-run */,
 				570706A51E0BAFC900ABFCFF /* PerformHandler */,
@@ -1377,6 +1419,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		57FEFE0B1E5EE39900F53787 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				57FEFE0C1E5EE39900F53787 /* LXScrollLoopViewController.h */,
+				57FEFE0D1E5EE39900F53787 /* LXScrollLoopViewController.m */,
+			);
+			path = "轮播图";
+			sourceTree = "<group>";
+		};
 		EB427A391EDCA07F0D3ACA2A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1605,6 +1656,7 @@
 				5701AB821E090A4C00F0F8A3 /* SubTestBtn.m in Sources */,
 				571672901DF6560000C5A896 /* LoginViewController.m in Sources */,
 				570655F81E013ECE00D531D6 /* NSObject+Description.m in Sources */,
+				5701DD261E55954300A53D99 /* WXCircleProgressView.m in Sources */,
 				571180211DE9676F003F09E6 /* NSString+PreciseDecimalCalculate.m in Sources */,
 				57F555101DEC081E00C72570 /* CameraCustomViewController.m in Sources */,
 				1B2805B01E26220F006F5DF9 /* UIView+HitTest.m in Sources */,
@@ -1634,6 +1686,7 @@
 				57F555571DEC081F00C72570 /* ZLCameraView.m in Sources */,
 				5707069E1E0B988E00ABFCFF /* NextTestTableViewController.m in Sources */,
 				57F555321DEC081E00C72570 /* LGPhotoRect.m in Sources */,
+				5701DD291E55954300A53D99 /* WXPhotoCell.m in Sources */,
 				570656071E014AC400D531D6 /* UIControl+TouchControl.m in Sources */,
 				5797EB451E54448C00EDBDBE /* UITableView+TableSimple.m in Sources */,
 				57F555611DEC081F00C72570 /* PickerCustomModel.m in Sources */,
@@ -1652,12 +1705,14 @@
 				571180251DE9676F003F09E6 /* UIImage+Deal.m in Sources */,
 				57F555411DEC081E00C72570 /* LGPhotoPickerFooterCollectionReusableView.m in Sources */,
 				57F5553A1DEC081E00C72570 /* LGPhotoPickerDatas.m in Sources */,
+				5701DD271E55954300A53D99 /* WXPhoto.m in Sources */,
 				57F8A2CA1DF16D0F000DC898 /* UIView+LayerAction.m in Sources */,
 				57F555621DEC081F00C72570 /* PickViewCustom.m in Sources */,
 				571180271DE9676F003F09E6 /* UITextField+InputNumberControl.m in Sources */,
 				1B92ADB21E4961240088F061 /* UIScrollView+EmptyDataSet.m in Sources */,
 				57F555381DEC081E00C72570 /* LGPhotoPickerCustomToolBarView.m in Sources */,
 				570706AB1E0BAFC900ABFCFF /* PerformanceMonitor.m in Sources */,
+				5701DD2A1E55954300A53D99 /* WXPhotoScrollView.m in Sources */,
 				570706AA1E0BAFC900ABFCFF /* BSBacktraceLogger.m in Sources */,
 				570EE4621DED289F0052D9A2 /* UIView+Extension.m in Sources */,
 				5701AB8C1E0A671700F0F8A3 /* AppDelegate+Assist.m in Sources */,
@@ -1670,6 +1725,7 @@
 				571180221DE9676F003F09E6 /* UIButton+Custom.m in Sources */,
 				57F5553F1DEC081E00C72570 /* LGPhotoPickerCollectionView.m in Sources */,
 				571180231DE9676F003F09E6 /* UIColor+Turn.m in Sources */,
+				57FEFE0E1E5EE39900F53787 /* LXScrollLoopViewController.m in Sources */,
 				571180191DE9676F003F09E6 /* NaviStandCopy.m in Sources */,
 				57EACCF41E02853E00C8D19E /* UIView+Picker.m in Sources */,
 				571180171DE9676F003F09E6 /* BaseViewController.m in Sources */,
@@ -1679,6 +1735,7 @@
 				57F555171DEC081E00C72570 /* UIImage+FixOrientation.m in Sources */,
 				571180501DE98B04003F09E6 /* GroundViewController.m in Sources */,
 				57F555371DEC081E00C72570 /* LGPhotoPickerBrowserPhotoView.m in Sources */,
+				5701DD281E55954300A53D99 /* WXPhotoBrowser.m in Sources */,
 				570EE4631DED289F0052D9A2 /* YSLoopView.m in Sources */,
 				5711802C1DE9676F003F09E6 /* main.m in Sources */,
 				570655F71E013ECE00D531D6 /* NSArray+Safety.m in Sources */,
@@ -1694,6 +1751,7 @@
 				57F555311DEC081E00C72570 /* LGPhotoPickerBrowserPhoto.m in Sources */,
 				57F8A2C71DF159E3000DC898 /* LXGuideAndLaunch.m in Sources */,
 				57F5553E1DEC081E00C72570 /* LGPhotoPickerViewController.m in Sources */,
+				57FB02701E5D57E600762127 /* UIImageView+CornerRadius.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

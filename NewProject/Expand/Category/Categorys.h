@@ -19,5 +19,7 @@
 #import "UIControl+TouchControl.h"
 #import "UIDevice+CurrentDevice.h"
 #import "UIView+HitTest.h"
+#import "UIImageView+CornerRadius.h"
+#import "UIScrollView+EmptyDataSet.h"
 
 #endif /* Categorys_h */
