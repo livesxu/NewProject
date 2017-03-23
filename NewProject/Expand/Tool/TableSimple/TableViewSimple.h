@@ -1,4 +1,3 @@
-
 // Static Table 创建，cell最好不要复用 ->当section.cellsArray总量大于reusableCells则多于部分无法显示！
 
 #import <UIKit/UIKit.h>
@@ -7,7 +6,7 @@
 
 typedef void(^LXTableSimpleSectionBlock)(TableSimpleSection *section,NSUInteger sectionIndex);
 
-@interface UITableView (TableSimple)<UITableViewDelegate,UITableViewDataSource>
+@interface TableViewSimple : UITableView<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *sectionsArray;
 
@@ -21,6 +20,6 @@ typedef void(^LXTableSimpleSectionBlock)(TableSimpleSection *section,NSUInteger 
             withRowAnimation:(UITableViewRowAnimation)animation;
 
 - (void)simpleDeleteRowsAtIndexPath:(NSIndexPath *)indexPath
-                    withRowAnimation:(UITableViewRowAnimation)animation;
+                   withRowAnimation:(UITableViewRowAnimation)animation;
 
 @end

@@ -33,6 +33,7 @@
 		570EA7DF1E077F4E00567940 /* LXUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 570EA7DE1E077F4E00567940 /* LXUncaughtExceptionHandler.m */; };
 		570EE4621DED289F0052D9A2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 570EE45E1DED289F0052D9A2 /* UIView+Extension.m */; };
 		570EE4631DED289F0052D9A2 /* YSLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570EE4601DED289F0052D9A2 /* YSLoopView.m */; };
+		570FC0B91E80B7CF00C30D84 /* TableViewSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 570FC0B81E80B7CF00C30D84 /* TableViewSimple.m */; };
 		571180151DE9676F003F09E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57117FCC1DE9676F003F09E6 /* Assets.xcassets */; };
 		571180161DE9676F003F09E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57117FCD1DE9676F003F09E6 /* LaunchScreen.storyboard */; };
 		571180171DE9676F003F09E6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57117FD21DE9676F003F09E6 /* BaseViewController.m */; };
@@ -61,7 +62,6 @@
 		571672961DF6924B00C5A896 /* UIViewController+PhotoExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 571672951DF6924B00C5A896 /* UIViewController+PhotoExtension.m */; };
 		577750DE1E11087B00EAEB2E /* UIWindow+Test_run.m in Sources */ = {isa = PBXBuildFile; fileRef = 577750DD1E11087B00EAEB2E /* UIWindow+Test_run.m */; };
 		5797EB441E54448C00EDBDBE /* TableSimpleSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797EB3F1E54448C00EDBDBE /* TableSimpleSection.m */; };
-		5797EB451E54448C00EDBDBE /* UITableView+TableSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797EB411E54448C00EDBDBE /* UITableView+TableSimple.m */; };
 		5797EB461E54448C00EDBDBE /* UITableViewCell+TableSimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797EB431E54448C00EDBDBE /* UITableViewCell+TableSimpleCell.m */; };
 		57989FB91DAB777000E35582 /* NewProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57989FB81DAB777000E35582 /* NewProjectTests.m */; };
 		57989FC41DAB777000E35582 /* NewProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57989FC31DAB777000E35582 /* NewProjectUITests.m */; };
@@ -216,6 +216,8 @@
 		570EE45F1DED289F0052D9A2 /* YSLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLoopView.h; sourceTree = "<group>"; };
 		570EE4601DED289F0052D9A2 /* YSLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLoopView.m; sourceTree = "<group>"; };
 		570EE4611DED289F0052D9A2 /* ZYAppHeaderForiPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAppHeaderForiPad.h; sourceTree = "<group>"; };
+		570FC0B71E80B7CF00C30D84 /* TableViewSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSimple.h; sourceTree = "<group>"; };
+		570FC0B81E80B7CF00C30D84 /* TableViewSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSimple.m; sourceTree = "<group>"; };
 		57117FCC1DE9676F003F09E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57117FCE1DE9676F003F09E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57117FD11DE9676F003F09E6 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -278,8 +280,6 @@
 		577750DD1E11087B00EAEB2E /* UIWindow+Test_run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Test_run.m"; sourceTree = "<group>"; };
 		5797EB3E1E54448C00EDBDBE /* TableSimpleSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSimpleSection.h; sourceTree = "<group>"; };
 		5797EB3F1E54448C00EDBDBE /* TableSimpleSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSimpleSection.m; sourceTree = "<group>"; };
-		5797EB401E54448C00EDBDBE /* UITableView+TableSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+TableSimple.h"; sourceTree = "<group>"; };
-		5797EB411E54448C00EDBDBE /* UITableView+TableSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+TableSimple.m"; sourceTree = "<group>"; };
 		5797EB421E54448C00EDBDBE /* UITableViewCell+TableSimpleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TableSimpleCell.h"; sourceTree = "<group>"; };
 		5797EB431E54448C00EDBDBE /* UITableViewCell+TableSimpleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TableSimpleCell.m"; sourceTree = "<group>"; };
 		57989F9B1DAB777000E35582 /* NewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1002,10 +1002,10 @@
 		5797EB3D1E54448C00EDBDBE /* TableSimple */ = {
 			isa = PBXGroup;
 			children = (
+				570FC0B71E80B7CF00C30D84 /* TableViewSimple.h */,
+				570FC0B81E80B7CF00C30D84 /* TableViewSimple.m */,
 				5797EB3E1E54448C00EDBDBE /* TableSimpleSection.h */,
 				5797EB3F1E54448C00EDBDBE /* TableSimpleSection.m */,
-				5797EB401E54448C00EDBDBE /* UITableView+TableSimple.h */,
-				5797EB411E54448C00EDBDBE /* UITableView+TableSimple.m */,
 				5797EB421E54448C00EDBDBE /* UITableViewCell+TableSimpleCell.h */,
 				5797EB431E54448C00EDBDBE /* UITableViewCell+TableSimpleCell.m */,
 			);
@@ -1688,7 +1688,6 @@
 				57F555321DEC081E00C72570 /* LGPhotoRect.m in Sources */,
 				5701DD291E55954300A53D99 /* WXPhotoCell.m in Sources */,
 				570656071E014AC400D531D6 /* UIControl+TouchControl.m in Sources */,
-				5797EB451E54448C00EDBDBE /* UITableView+TableSimple.m in Sources */,
 				57F555611DEC081F00C72570 /* PickerCustomModel.m in Sources */,
 				57F555361DEC081E00C72570 /* LGPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				570655FB1E013ECE00D531D6 /* UITextView+Placeholder.m in Sources */,
@@ -1750,6 +1749,7 @@
 				571180531DE98B19003F09E6 /* HomeViewController.m in Sources */,
 				57F555311DEC081E00C72570 /* LGPhotoPickerBrowserPhoto.m in Sources */,
 				57F8A2C71DF159E3000DC898 /* LXGuideAndLaunch.m in Sources */,
+				570FC0B91E80B7CF00C30D84 /* TableViewSimple.m in Sources */,
 				57F5553E1DEC081E00C72570 /* LGPhotoPickerViewController.m in Sources */,
 				57FB02701E5D57E600762127 /* UIImageView+CornerRadius.m in Sources */,
 			);

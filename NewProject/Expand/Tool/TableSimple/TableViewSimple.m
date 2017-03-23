@@ -1,25 +1,14 @@
 //
-//  UITableView+TableSimple.m
+//  TableViewSimple.m
 //  XiaoLiuFisheries
 //
-//  Created by Livespro on 2017/2/10.
+//  Created by Livespro on 2017/3/9.
 //  Copyright © 2017年 福中集团软件公司. All rights reserved.
 //
 
-#import "UITableView+TableSimple.h"
-#import <objc/runtime.h>
+#import "TableViewSimple.h"
 
-@implementation UITableView (TableSimple)
-
-- (void)setSectionsArray:(NSMutableArray *)sectionsArray{
-    
-    objc_setAssociatedObject(self, @selector(sectionsArray), sectionsArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (NSMutableArray *)sectionsArray{
-    
-    return objc_getAssociatedObject(self, _cmd);
-}
+@implementation TableViewSimple
 
 - (void)addSection:(LXTableSimpleSectionBlock)sectionBlock;{
     
@@ -66,7 +55,7 @@
     [self.sectionsArray insertObject:section atIndex:sectionIndex];
     
     [self insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationNone];
-
+    
     [self endUpdates];
 }
 
@@ -182,7 +171,7 @@
 
 #pragma mark - selected
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     TableSimpleSection *section_temp = self.sectionsArray[indexPath.section];
     
     UITableViewCell *cell_temp = section_temp.cellsArray[indexPath.row];
