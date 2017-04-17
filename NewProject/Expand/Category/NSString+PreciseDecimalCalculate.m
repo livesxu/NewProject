@@ -12,6 +12,10 @@
 
 +(NSString *)addCalculate:(NSString *)numericalValueOne With:(NSString *)numericalValueOther;{
     
+    if (!numericalValueOne || [numericalValueOne isEqualToString:@"(null)"] || !numericalValueOther || [numericalValueOther isEqualToString:@"(null)"]) {
+        
+        return @"0";
+    }
     NSDecimalNumber *valueOne = [NSDecimalNumber decimalNumberWithString:numericalValueOne];
     NSDecimalNumber *valueOther = [NSDecimalNumber decimalNumberWithString:numericalValueOther];
     
@@ -20,6 +24,10 @@
 
 +(NSString *)subtractCalculate:(NSString *)numericalValueOne With:(NSString *)numericalValueOther;{
     
+    if (!numericalValueOne || [numericalValueOne isEqualToString:@"(null)"] || !numericalValueOther || [numericalValueOther isEqualToString:@"(null)"]) {
+        
+        return @"0";
+    }
     NSDecimalNumber *valueOne = [NSDecimalNumber decimalNumberWithString:numericalValueOne];
     NSDecimalNumber *valueOther = [NSDecimalNumber decimalNumberWithString:numericalValueOther];
     
@@ -28,6 +36,10 @@
 
 +(NSString *)multiplyCalculate:(NSString *)numericalValueOne With:(NSString *)numericalValueOther;{
     
+    if (!numericalValueOne || [numericalValueOne isEqualToString:@"(null)"] || !numericalValueOther || [numericalValueOther isEqualToString:@"(null)"]) {
+        
+        return @"0";
+    }
     NSDecimalNumber *valueOne = [NSDecimalNumber decimalNumberWithString:numericalValueOne];
     NSDecimalNumber *valueOther = [NSDecimalNumber decimalNumberWithString:numericalValueOther];
     
@@ -36,6 +48,10 @@
 
 +(NSString *)divideCalculate:(NSString *)numericalValueOne With:(NSString *)numericalValueOther;{
     
+    if (!numericalValueOne || [numericalValueOne isEqualToString:@"(null)"] || !numericalValueOther || [numericalValueOther isEqualToString:@"(null)"]) {
+        
+        return @"0";
+    }
     NSDecimalNumber *valueOne = [NSDecimalNumber decimalNumberWithString:numericalValueOne];
     NSDecimalNumber *valueOther = [NSDecimalNumber decimalNumberWithString:numericalValueOther];
     

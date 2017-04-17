@@ -10,6 +10,6 @@
 
 @interface NextTestTableViewController : UIViewController
 
-@property (nonatomic, strong)  UITableView * tableView;
+@property (nonatomic, strong)  TableViewSimple * tableView;
 
 @end

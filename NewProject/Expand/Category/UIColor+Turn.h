@@ -6,7 +6,7 @@
 //  Copyright © 2015年 福中. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface UIColor (Turn)
 

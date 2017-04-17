@@ -7,11 +7,11 @@
 #import <MJRefresh/MJRefresh.h>
 #import <YYCache/YYCache.h>
 #import <YYModel/YYModel.h>
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 #import "MBProgressHUD.h"
 #import "Masonry.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import <ReactiveCocoa/UIControl+RACSignalSupport.h>//rac支持
+
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
 #import "IQKeyboardManager.h"

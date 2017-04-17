@@ -11,7 +11,7 @@
 #import "UIViewController+PhotoExtension.h"
 #import "UIView+Picker.h"
 #import "AppActionMonitor.h"
-#import "UITableView+TableSimple.h"
+#import "TableViewSimple.h"
 
 
 #endif /* Tools_h */

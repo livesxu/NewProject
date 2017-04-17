@@ -22,9 +22,7 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
-  - ReactiveCocoa (4.2.2):
-    - Result (~> 2.0)
-  - Result (2.1.3)
+  - ReactiveObjC (3.0.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -40,7 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - Aspects (~> 1.4.1)
+  - Aspects
   - FDFullscreenPopGesture (~> 1.1)
   - FLEX (~> 2.4.0)
   - IQKeyboardManager (~> 4.0.7)
@@ -48,7 +46,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
-  - ReactiveCocoa (~> 4.2.2)
+  - ReactiveObjC
   - SDWebImage (~> 3.8.1)
   - SWTableViewCell (~> 0.3.7)
   - YYCache (~> 1.0.4)
@@ -65,8 +63,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  ReactiveCocoa: 72263e7ac0770c274617ccd345e01049d0ca38ae
-  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
@@ -74,6 +71,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: fa62a7a288b21481b74f424b59d11b058653aaab
+PODFILE CHECKSUM: bb797f6fb1f011e77f2e7e0be19974f0e2321be4
 
 COCOAPODS: 1.1.1

@@ -1508,6 +1508,7 @@
 					57989F9A1DAB777000E35582 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7KQ8572KJ8;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					57989FB31DAB777000E35582 = {
@@ -1903,6 +1904,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = livesxu.NewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1921,6 +1923,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = livesxu.NewProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
