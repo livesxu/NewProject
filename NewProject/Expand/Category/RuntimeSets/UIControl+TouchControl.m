@@ -41,15 +41,15 @@
 }
 //当我们按钮点击事件 sendAction 时  将会执行  mySendAction
 - (void)mySendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-    if (self.isIgnore) {
+    if (self.timeInterval == 0 || self.isIgnore) {
         //不需要被hook
         [self mySendAction:action to:target forEvent:event];
         return;
     }
-    self.timeInterval =self.timeInterval == 0 ?defaultInterval:self.timeInterval;
+//    self.timeInterval =self.timeInterval == 0 ?defaultInterval:self.timeInterval;
     if (self.isIgnoreEvent){
         return;
-    }else if (self.timeInterval >= 0){
+    }else if (self.timeInterval > 0){
         [self performSelector:@selector(resetState) withObject:nil afterDelay:self.timeInterval];
     }
 

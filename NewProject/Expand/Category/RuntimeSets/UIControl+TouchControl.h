@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define defaultInterval .0f  //默认时间间隔
+#define defaultInterval .3f  //默认时间间隔 -- 改，默认不hook
 @interface UIControl (TouchControl)
 /**设置点击时间间隔*/
 @property (nonatomic, assign) NSTimeInterval timeInterval;
